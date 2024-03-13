@@ -1,12 +1,34 @@
 \documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{changepage}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[
+backend=biber
+]{biblatex}
+\usepackage{float}
+\addbibresource{bib.bib} %Imports bibliography file
+
+% Use IEEE citations
+
+\useunder{\uline}{\ul}{}
+
+\title{Observing the Normal Zeeman Effect and Estimating e/m for Orbital Electrons}
+\date{\today}
+\author{Mateusz Kazimierczak and Gustavo Nakashita}
 
 \begin{document}
 
-\section{Introduction}
+\maketitle
 
-Change Number of scans to0 average: No difference seen
+\input{intro/intro.tex}
+\input{method/method.tex}
+\input{Results/Results.tex}
+\input{Conclusion/Conclusion.tex}
+\input{Appendix/Appendix.tex}
 
-Smoothing: (maybe Fourier transforms).
-
+\printbibliography
 
 \end{document}
