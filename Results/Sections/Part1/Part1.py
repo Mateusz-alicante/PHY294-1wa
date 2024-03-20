@@ -43,10 +43,10 @@ for i in range(len(observed_energies)):
     print("{:.3f}".format(observed_energies[i]))
 
 
-observed = [val.nominal_value for val in observed_energies]
+observed_energies_val = [val.nominal_value for val in observed_energies]
 
 # Create linear plots of expected vs observed wavelengths with uncertainty
-plt.errorbar(real_energies, observed,
+plt.errorbar(real_energies, observed_energies_val,
              yerr=[val.std_dev for val in observed_energies], fmt='o', label="Observed Energies")
 
 plt.xlabel("Real Energies (eV)")
@@ -60,7 +60,7 @@ def fit_function(x, a, b):
     return a * x + b
 
 
-a_fit, cov = curve_fit(fit_function, real_energies, observed)
+a_fit, cov = curve_fit(fit_function, real_energies, observed_energies_val)
 slope = a_fit[0]
 intercept = a_fit[1]
 slope_std = np.sqrt(cov[0, 0])
@@ -69,10 +69,26 @@ y = x * slope + intercept
 
 print(f"Slope: {slope} ± {slope_std}")
 
-chi_squared(real_energies * slope, observed,
-            np.std(observed), 2)
+chi_squared(real_energies * slope, observed_energies_val,
+            np.std(observed_energies_val), 2)
 
 plt.plot(x, y, label="y = {:.3f}x + {:.3f}".format(slope, intercept))
 plt.legend()
+plt.savefig("Results/Sections/Part1/Part1_wavelength_observed_vs_expected.png")
 
-plt.show()
+# Compute residuals
+residuals = observed_energies_val - (real_energies * slope + intercept)
+plt.figure()
+plt.errorbar(real_energies, residuals,
+             yerr=[val.std_dev for val in observed_energies], fmt='o')
+
+plt.axhline(0, color='black', lw=0.5)
+
+plt.xlabel("Real Energies (eV)")
+plt.ylabel("Residuals (eV)")
+plt.title("Residuals of observed vs real energies")
+plt.savefig("Results/Sections/Part1/Part1_residuals.png")
+
+
+# Plot observed vs real wavelengths
+plt.figure()
