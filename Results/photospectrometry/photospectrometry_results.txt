@@ -1,0 +1,37 @@
+All uncertainty measurements taken as FWHH in pixels
+
+Mercury: 
+
+Hydrogen: 875 pixels = 550 nm --> 1 pixel = 0.628571 nm
+437.7 nm +/- 5 pix
+485.7 nm +/- 7 pix
+649.5 nm +/- 9 pix
+
+Helium: 896 pixels = 550 nm --> 1 pixel = 0.613839 nm
+394.6 nm +/- 7 pix
+449.4 nm +/- 5 pix
+499.9 nm +/- 6 pix
+581.4 nm +/- 9 pix
+661.0 nm +/- 9 pix
+699.1 nm +/- 8 pix
+
+Mercury: 893 pixels = 800 nm --> 1 pixel = 0.89585666 nm
+409.4 nm +/- 4 pix
+439 nm +/- 4 pix
+541.4 nm +/- 5 pix
+570.9 nm +/- 7 pix
+573.3 +/- 7 pix
+
+Unknown: 1285 pixels = 800 nm --> 1 pixel = 0.62256809 nm
+551.2 nm +/- 6 pix
+580.6 nm +/- 9 pix
+748.8 nm +/- 9 pix
+751.5 nm +/- 9 pix
+757.6 nm +/- 6 pix
+760.0 nm +/- 6 pix
+776.6 nm +/- 8 pix
+800.1 nm +/- 12 pix
+803.3 nm +/- 12 pix
+811.2 nm +/- 7 pix
+819.3 nm +/- 10 pix
+822.5 nm +/- 10 pix
