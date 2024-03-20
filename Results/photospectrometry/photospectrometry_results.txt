@@ -18,6 +18,7 @@ Helium: 896 pixels = 550 nm --> 1 pixel = 0.613839 nm
 
 Mercury: 893 pixels = 800 nm --> 1 pixel = 0.89585666 nm
 409.4 nm +/- 4 pix
+412.6 nm +/- 4 pix
 439 nm +/- 4 pix
 541.4 nm +/- 5 pix
 570.9 nm +/- 7 pix
