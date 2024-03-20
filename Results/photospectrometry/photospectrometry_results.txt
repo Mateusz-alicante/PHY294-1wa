@@ -1,11 +1,12 @@
 All uncertainty measurements taken as FWHH in pixels
 
-Mercury: 
-
 Hydrogen: 875 pixels = 550 nm --> 1 pixel = 0.628571 nm
 437.7 nm +/- 5 pix
 485.7 nm +/- 7 pix
 649.5 nm +/- 9 pix
+
+True Hydrogen:
+
 
 Helium: 896 pixels = 550 nm --> 1 pixel = 0.613839 nm
 394.6 nm +/- 7 pix
