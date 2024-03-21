@@ -25,15 +25,17 @@ Mercury: 893 pixels = 800 nm --> 1 pixel = 0.89585666 nm
 573.3 +/- 7 pix
 
 Unknown: 1285 pixels = 800 nm --> 1 pixel = 0.62256809 nm
-551.2 nm +/- 6 pix
-580.6 nm +/- 9 pix
-748.8 nm +/- 9 pix
-751.5 nm +/- 9 pix
-757.6 nm +/- 6 pix
-760.0 nm +/- 6 pix
-776.6 nm +/- 8 pix
-800.1 nm +/- 12 pix
-803.3 nm +/- 12 pix
-811.2 nm +/- 7 pix
-819.3 nm +/- 10 pix
-822.5 nm +/- 10 pix
+
+wavelength : intensity
+551.2 nm +/- 6 pix  : 4.620
+580.6 nm +/- 9 pix : 4.566
+748.8 nm +/- 9 pix : 36.634
+751.5 nm +/- 9 pix : 52.601
+757.6 nm +/- 6 pix : 11.434
+760.0 nm +/- 6 pix : 13.071
+776.6 nm +/- 8 pix : 7.550
+800.1 nm +/- 12 pix : 28.883
+803.3 nm +/- 12 pix : 37.835
+811.2 nm +/- 7 pix : 12.049
+819.3 nm +/- 10 pix : 20.245
+822.5 nm +/- 10 pix : 17.873
