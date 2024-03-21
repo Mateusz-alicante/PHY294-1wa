@@ -1,1 +1,46 @@
 \section{Introduction}
+This lab will cover spectral analysis of gases and the transmittance and absorption of light through differently-colored solutions. A spectrum plots the intensity of light as a function of wavelength, where the intensity is a count of the number of photons detected at a given wavelength.
+
+Using our knowledge of quantum mechanics, not all wavelengths are equally likely; in fact, only a select few wavelengths of light will be emitted when excited, corresponding to the energy levels of electrons in the atom. For hydrogen specifically, the energy of emitted photons is given as the Rydberg formula:
+
+\begin{equation}
+   E = R_{EH} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
+\end{equation}
+
+where $E$ is the energy of the emitted photon, $R_{EH}$ is the Rydberg constant with $R_{EH} = 13.605693~eV$, and $n_1$ and $n_2$ are the initial and final energy levels of the electron respectively. Additionally, using the formulas for the energy of a photon $E = hf$ and the speed of light $c = f\lambda$, we can equivalently express the wavelength of the emitted photon as:
+
+\begin{equation}
+   \frac{1}{\lambda} = R_{H} \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
+\end{equation}
+
+where $R_{H}=\frac{R_EH}{hc}$ is the Rydberg constant (in different units) with $R_{H} = 1.097373 \times 10^7~m^{-1}$. 
+
+These equations can be further generalized using the Bohr model of the atom, with which we can express the energy levels of the electrons in a hydrogen-like atom as:
+
+\begin{equation}
+   E_n = -\frac{R_{EH}Z^2}{n^2}
+\end{equation}
+
+Where $n$ is the principal quantum number, and $Z$ is the atomic number of the element. Using this model, we can accurately predict the wavelengths of light emitted by hydrogen and other hydrogen-like atoms.
+
+However, the relative intensities are affected by other factors, one of which are the selection rules. These rules dictate which transitions are allowed and which are forbidden. Such selection rules include $\Delta l = \pm 1$, $\Delta m = 0, \pm 1$, and $\Delta s = 0$. Violations of these rules leads to a quantumly forbidden transition, and thus a lower intensity of light emitted at that wavelength. Other exceptions also exist, but spectral analysis has been well documented, so the expected wavelengths of light emitted by hydrogen and other non-hydrogen-like atoms are well known.
+
+The second part of this lab will cover the transmittance and absorption of light through differently-colored solutions. The governing equations for transmittance and absorption are given by:
+
+\begin{equation}
+   T = \frac{I}{I_0} * 100\%
+\end{equation}
+
+\begin{equation}
+   A = -\log_{10}(T/100\%)
+\end{equation}
+
+where the transmittance T is expressed as the percentage of incident light $I_0$ that passes through the solution $I$ and the absorbance A is a measure of the amount of light absorbed by the solution. Knowing the transmittance and absorption at various wavelengths can reveal why we perceive the solution as a certain color under white light.
+
+These can be used to determine various components of the solution, such as the concentration of the solute via the Beer-Lambert Law, or as we will investigate, the band gap of the solute. The absorption edge of a solution is the wavelength where there exists a sharp increase in the absorbance of light, and is related to the band gap of the solute by the energy of the photon at this wavelength:
+
+\begin{equation}
+   E_g = \frac{hc}{\lambda_{edge}}~J = \frac{hc}{1\times10^{-9} e} \frac{1}{\lambda_{edge}~[nm]} ~eV
+\end{equation}
+
+This energy represents the required energy to excite an electron from the valence band to the conduction band, leading to the absorption of that photon: less energized photons are simply transmitted and do not interact with the solution. A semiconductor should have a band gap of about 4 eV. 
