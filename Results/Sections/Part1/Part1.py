@@ -21,11 +21,11 @@ real = np.array([404.6565, 407.7837, 435.8328, 546.0735, 576.9598, 579.0663])
 pixel_to_nm = 0.89585666
 
 # Define the observed values in pixels and their uncertainties
-observed_pixels = np.array([409.4, 412.6, 439, 541.4, 570.9, 573.3])
+observed = np.array([409.4, 412.6, 439, 541.4, 570.9, 573.3])
 uncertainties_pixels = np.array([4, 4, 4, 5, 7, 7])
 
 # Convert the observed values and their uncertainties to nm
-observed_nm = observed_pixels * pixel_to_nm
+observed_nm = observed
 uncertainties_nm = uncertainties_pixels * pixel_to_nm
 
 # add errors to observed data
@@ -34,6 +34,11 @@ ERROR = 0.05
 # Create a uarray with the observed values and their uncertainties
 observed = np.array([ufloat(n, max(u, ERROR))
                     for n, u in zip(observed_nm, uncertainties_nm)])
+
+# print the wavelength values with uncertanties:
+print("Wavelengths with uncertainties ==============")
+for entry in observed:
+    print(f"{entry.nominal_value:.2f} \pm {entry.std_dev:.2f}")
 
 
 # calculate energies:
@@ -45,6 +50,11 @@ real_energies = np.array(
     [H * C / (real[i] * 1e-9) / EV for i in range(len(real))])
 observed_energies = np.array([H * C / (observed[i] * 1e-9) / EV
                               for i in range(len(observed))])
+
+# print the energy values for each reference observation
+print("Energy with uncertainties ==============")
+for entry in observed_energies:
+    print(f"{entry.nominal_value:.2f} \pm {entry.std_dev:.2f}")
 
 observed_energies_val = [val.nominal_value for val in observed_energies]
 
