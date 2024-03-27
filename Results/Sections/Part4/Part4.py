@@ -26,7 +26,7 @@ intensity = []
 
 for line in data:
     parts = line.split()
-    wavelengths.append(float(parts[0]))
+    wavelengths.append(0.936 * float(parts[0]) + 30.7)
     uncertainties.append(int(parts[3]) * PIX_TO_NM)
     intensity.append(float(parts[6]))
 
