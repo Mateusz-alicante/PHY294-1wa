@@ -28,7 +28,7 @@ observed_pixels = np.array([437.7, 485.7, 649.5])
 uncertainties_pixels = np.array([5, 7, 9])
 
 # Convert the observed values and their uncertainties to nm
-observed_nm = observed_pixels
+observed_nm = 1.068 * observed_pixels - 32.7
 uncertainties_nm = uncertainties_pixels * pixel_to_nm
 
 # Create a uarray with the observed values and their uncertainties
