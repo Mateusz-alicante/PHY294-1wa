@@ -158,3 +158,22 @@ plt.title("Residuals of observed vs real wavelengths")
 plt.savefig(
     "Results/Sections/Part1/Part1_wavelength_observed_vs_expected_residuals.png")
 plt.clf()
+
+
+# Finding calibration for x = observed, y = expected wavelengths
+
+x = observed_wavelengths_val
+y = real
+
+
+def fit_function(x, a, b):
+    return a * x + b
+
+
+a_fit, cov = curve_fit(fit_function, real, observed_wavelengths_val)
+slope = a_fit[0]
+intercept = a_fit[1]
+slope_std = np.sqrt(cov[0, 0])
+
+print("x = observed, y = expected wavelength conversions")
+print(f"line: {slope} ± {slope_std} x + {intercept} ± {np.sqrt(cov[1, 1])}")
