@@ -170,7 +170,7 @@ def fit_function(x, a, b):
     return a * x + b
 
 
-a_fit, cov = curve_fit(fit_function, real, observed_wavelengths_val)
+a_fit, cov = curve_fit(fit_function, observed_wavelengths_val, real)
 slope = a_fit[0]
 intercept = a_fit[1]
 slope_std = np.sqrt(cov[0, 0])
