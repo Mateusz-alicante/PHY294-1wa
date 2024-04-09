@@ -1,7 +1,7 @@
 
 \subsection{Part 1}
 
-In this part we begin by comparing the expected and observed wavelengths and energies of the spectral lines of the hydrogen atom. The expected wavelengths and energies are calculated using the Rydberg formula, and the observed values are obtained from the spectrometer. The results are shown in Table \ref{tab:Part1_expected_vs_observed} and the plots in Figures \ref{fig:Part1wave} and \ref{fig:Part1energy}.
+In this part we begin by comparing the expected and observed wavelengths and energies of the spectral lines of the hydrogen atom. The expected wavelengths and energies are calculated using the Rydberg formula (\ref{eq:Rydberg}), and the observed values are obtained from the spectrometer. The results are shown in Table \ref{tab:Part1_expected_vs_observed} and the plots in Figures \ref{fig:Part1wave} and \ref{fig:Part1energy}.
 The residuals are shown in Figures \ref{fig:Part1waveU} and \ref{fig:Part1energyU} respectively.
 
 The observed wavelengths and energies to do not fall within the uncertainty range of the real values, however, most of the values do fit within 2 uncertainty intervals. There seem to be a fixed offset between the real and observed values. This can be also also seen in the linear fit equations in figures \ref{fig:Part1wave} and \ref{fig:Part1energy}.
@@ -45,9 +45,10 @@ The best line fit for the expected vs observed wavelengths is given by equation 
 \end{equation}
 
 The residuals plot can be seen in Figure \ref{fig:Part1waveU}. The residuals seem to exhibit a random pattern, which is a indication that the fit is good. At each point, the line of best fit is within
-the uncertainty range of the observed value.
+the uncertainty range of the observed value. The $\chi^2$ and reduced $\chi^2$ values are given in equation \ref{eq:Part1wave_chi}. The reduced chi squared of 0.272 indicates that the fit is relatively good, being close to 1.
 
 \begin{equation}
+    \label{eq:Part1wave_chi}
     \chi^2 = 1.088 \qquad
     \frac{\chi^2}{v} = 0.272
 \end{equation}
@@ -80,9 +81,10 @@ The best line fit for the expected vs observed wavelengths is given by equation 
 \end{equation}
 
 The residuals plot can be seen in Figure \ref{fig:Part1waveU}. Again, the residuals seem to exhibit a random pattern, which is a indication that the fit is good. At each point, the line of best fit is within
-the uncertainty range of the observed value.
+the uncertainty range of the observed value. The $\chi^2$ and reduced $\chi^2$ values are given in equation \ref{eq:Part1eng_chi}. The reduced chi squared of 0.275 indicates that the fit is relatively good, being close to 1.
 
 \begin{equation}
+    \label{eq:Part1eng_chi}
     \chi^2 = 1.103 \qquad
     \frac{\chi^2}{v} = 0.275
 \end{equation}
@@ -102,10 +104,11 @@ the uncertainty range of the observed value.
     \label{fig:Part1energyU}
 \end{figure}
 
-As a last step, we calculate the relationship between the observed wavelenghts aas the independent variable, and the expected wavelengths as the dependent variable.
+As a last step, we calculate the relationship between the observed wavelenghts as the independent variable, and the expected wavelengths as the dependent variable (Equation \ref{eq:Part1wave_final}).
 This will prove helpful in the next sections, where we will use the observed wavelengths to calculate the expected wavelengths to determine the unknown gas.
 
 \begin{equation}
+    \label{eq:Part1wave_final}
     \lambda_{\text {th }} = (1.068 \pm 0.002) \lambda_{\text {exp }} + (- 32.78 \pm 1) \text{nm}
 \end{equation}
 
