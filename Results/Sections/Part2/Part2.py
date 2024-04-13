@@ -40,7 +40,9 @@ for i, n in enumerate(n):
     o_val = observed[i].nominal_value
     o_dev = observed[i].std_dev
     print(f"n={n}",
+          f"original wavelength: {o_val:.2f} \pm {o_dev:.2f} nm",
           f"observed wavelength: {o_val:.2f} \pm {o_dev:.2f} nm",
-          f"wavelegth = {line_wavelength[i]:.2f} nm",
-          f"line energy: {line_energy[i]:.2f} ev",
-          f"state energy: {state_energies[i]:.2f} ev", sep="; ")
+          #f"wavelegth = {line_wavelength[i]:.2f} nm",
+          #f"line energy: {line_energy[i]:.2f} ev",
+          #f"state energy: {state_energies[i]:.2f} ev", sep="; "
+          )

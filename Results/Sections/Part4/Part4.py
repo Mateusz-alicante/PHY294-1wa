@@ -23,14 +23,17 @@ PIX_TO_NM = 0.62256809
 wavelengths = []
 uncertainties = []
 intensity = []
+og_wavelengths = []
 
 for line in data:
     parts = line.split()
+    og_wavelengths.append(float(parts[0]))
     wavelengths.append(1.068 * float(parts[0]) - 32.7)
     uncertainties.append(int(parts[3]) * PIX_TO_NM)
     intensity.append(float(parts[6]))
 
 intensity = np.array(intensity) / max(intensity)
 
-for w, u, i in zip(wavelengths, uncertainties, intensity):
-    print(f"{w:.2f} nm +/- {u:.2f} nm ; relative intensity {i:.3f}")
+for w, u, i, og_w in zip(wavelengths, uncertainties, intensity, og_wavelengths):
+    #print(f"{w:.2f} nm +/- {u:.2f} nm ; relative intensity {i:.3f}")
+    print(f"${og_w:.2f} \pm {u:.2f}$ & ${w:.2f} \pm {u:.2f}$ \\\\")

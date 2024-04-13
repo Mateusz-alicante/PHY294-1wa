@@ -32,11 +32,14 @@ uncertainties_nm = uncertainties_pixels * pixel_to_nm
 observed = np.array([ufloat(n, u)
                     for n, u in zip(observed_nm, uncertainties_nm)])
 
-
+uncalibrated = np.array([ufloat(n, u) for n, u in zip(observed_pixels, uncertainties_nm)])
 # Print the energy values for each reference observation
 
-for entry in observed:
-    print(f"{entry.nominal_value:.2f} \pm {entry.std_dev:.2f}")
+for i in range(len(observed)):
+    print(
+        f"${uncalibrated[i].nominal_value:.2f} \pm {uncalibrated[i].std_dev:.2f}$ &",
+        f"${observed[i].nominal_value:.2f} \pm {observed[i].std_dev:.2f}$ \\\\"
+        )
 
 
 reference_wavelengths = np.array(
